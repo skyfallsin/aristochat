@@ -45,7 +45,7 @@ function onMessage(msg) {
     var user = Strophe.getResourceFromJid(from);
     
     if (type == "groupchat" && body) {
-        body = body.nodeValue;
+        body = body.nodeValue.replace(/(<([^>]+)>)/ig,"");
         if(user == NICK) {
             $('#chat').append("<tr class='message'><td class='me'>"+ user + "</td><td class='body'>" + body +"</td></tr>");            
         }
@@ -162,7 +162,7 @@ $(document).ready(function () {
     connection.rawOutput = rawOutput;
     
     $('#post').bind('click', function () {
-        var msg = $('#message_input').get(0).value;
+        var msg = $('#message_input').get(0).value.replace(/(<([^>]+)>)/ig,"");
         connection.send($msg({to: MUC_ROOM + "@" + MUC_COMPONENT, type: "groupchat", id: connection.getUniqueId}).c("body").t(msg).up().c("nick", {xmlns: "http://jabber.org/protocol/nick"}).t(NICK).tree());
          $('#message_input').get(0).value = "";
     });
