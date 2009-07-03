@@ -1,0 +1,92 @@
+#sidechat {
+    position: fixed;
+    background-color: white;
+    padding: 0px 10px 10px 10px;
+    display:block;
+    left: 60%;
+    width: 250px;
+}
+
+
+#chatroom {
+    width: 60%;
+    background-color: white;
+    min-height:300%;
+    padding:10px 10px 60px 10px;
+}
+
+#publish {
+    background-color: white;
+    bottom: 0px;
+    height: 110px;
+    position: fixed;
+    width: 36%;
+    padding:10px;
+}
+
+#chat {
+    border-spacing: 0px 50px 0px 0px;
+    border: none;
+    padding-bottom: 80px;
+}
+
+#chat tr {
+}
+
+#chat td {
+}
+
+#message_input {
+    width: 100%;
+    height: 80px;
+    margin:0px;
+}
+
+#roster {
+    display:none;
+}
+
+.message {
+    
+}
+
+.nick, .me {
+    font-weight: bold;
+    text-align:right;
+    width: 100px;
+    padding: 5px;
+    max-width: 20%;
+    margin-right: 5px;
+}
+
+.body {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #EBEBEB;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.message .nick {
+    background-color: #E2E2E2;
+    vertical-align:top;
+}
+.message .me {
+    vertical-align:top;
+    background-color: #FCFEE4;    
+}
+
+.message.body {
+}
+
+.presence {
+    font-size: 0.8em;
+}
+.presence .nick {
+    background-color: #E3F3D8;
+}
+
+.presence .body {
+    background-color: #E3F3D8;
+}
+
