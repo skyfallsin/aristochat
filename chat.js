@@ -180,7 +180,7 @@ $(document).ready(function () {
             }
             JID = $('#jid').get(0).value;
             PASSWORD = $('#pass').get(0).value;
-            connection.connect(JID, password, onConnect);
+            connection.connect(JID, PASSWORD, onConnect);
         } else {
             $('#connect').attr("disabled", "disabled"); // To disable 
             $('#loader').show();
